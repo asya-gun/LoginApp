@@ -169,6 +169,9 @@
                             <outlet property="delegate" destination="wxR-dj-0nw" id="PPI-Ro-WER"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="logOutButton" destination="VkE-jM-QFu" id="NMr-PK-FQL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3d-0A-eBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

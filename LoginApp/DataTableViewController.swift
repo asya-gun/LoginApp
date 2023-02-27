@@ -12,6 +12,7 @@ class DataTableViewController: UITableViewController {
     let service = Service()
     var users = [User]()
 
+    @IBOutlet weak var logOutButton: UITabBarItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
