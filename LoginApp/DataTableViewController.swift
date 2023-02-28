@@ -12,7 +12,6 @@ class DataTableViewController: UITableViewController {
     let service = Service()
     var users = [User]()
 
-    @IBOutlet weak var logOutButton: UITabBarItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +48,15 @@ class DataTableViewController: UITableViewController {
 
         return cell
     }
-
+    
+    
+    @IBAction func logOutBtn(_ sender: Any) {
+        service.logOut()
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuthVC")
+        self.view.insertSubview(vc.view, at: 9)
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

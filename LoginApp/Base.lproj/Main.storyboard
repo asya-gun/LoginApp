@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ev-FH-gLi">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -105,17 +105,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.80872068929999996" green="1" blue="0.41141615539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <tabBar key="tableFooterView" contentMode="scaleToFill" id="eik-W0-bRo">
-                            <rect key="frame" x="0.0" y="203" width="393" height="49"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <items>
-                                <tabBarItem title="Log Out" selectedImage="arrowshape.left" catalog="system" id="VkE-jM-QFu"/>
-                            </items>
-                        </tabBar>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="EnM-FR-L98">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Log Out">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="logOutBtn:" destination="wxR-dj-0nw" eventType="touchUpInside" id="K1a-oG-Rz5"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DataCell" rowHeight="125" id="Tc5-8s-QR7" customClass="DataViewCell" customModule="LoginApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="125"/>
+                                <rect key="frame" x="0.0" y="84.333333333333343" width="393" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tc5-8s-QR7" id="0IA-jx-2On">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="125"/>
@@ -169,9 +173,6 @@
                             <outlet property="delegate" destination="wxR-dj-0nw" id="PPI-Ro-WER"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="logOutButton" destination="VkE-jM-QFu" id="NMr-PK-FQL"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3d-0A-eBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,7 +257,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.left" catalog="system" width="128" height="104"/>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <namedColor name="AccentColor">
