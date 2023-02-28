@@ -64,7 +64,7 @@ class Service {
     }
     
     func logOut() {
-//        Auth.auth().signOut()
+        try? Auth.auth().signOut()
         UserDefaults.standard.set(false, forKey: "isLogin")
         print("logged out")
     }
